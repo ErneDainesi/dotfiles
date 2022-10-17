@@ -57,7 +57,7 @@ return packer.startup(function(use)
         "MunifTanjim/nui.nvim",
     }
   }
-  use "akinsho/bufferline.nvim"
+  --use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
