@@ -39,6 +39,10 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+q kill
 
+# gaps
+gaps inner 6
+gaps outer 3
+
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec rofi -show drun -show-icons
@@ -164,11 +168,38 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Define colors variables:
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+
+for_window [class="^.*"] border pixel 1
+
+# define colors for windows:
+#class		        	border		bground		text		indicator	child_border
+client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
+client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
+client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
+client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command py3status -c ~/.config/i3status/i3status.conf
-        position top
+    status_command py3status -c ~/.config/i3status/i3status.conf
+    position top
 
-        font pango:JetBrains Mono 11px
+    font pango:JetBrains Mono 11px
+
+    colors {
+        focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
+    }
 }
+
