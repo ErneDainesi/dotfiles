@@ -2,6 +2,7 @@
 -- local colorscheme = require("user.colors.tokyonight").colorscheme
 -- local colorscheme = require("user.colors.catpuccin").colorscheme
 -- local colorscheme = require("user.colors.onedark").colorscheme
+--local colorscheme = require("user.colors.neosolarized").colorscheme
 
 local colorscheme = require("user.colors.gruvbox").colorscheme
 
