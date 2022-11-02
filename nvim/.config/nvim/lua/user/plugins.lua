@@ -57,7 +57,7 @@ return packer.startup(function(use)
         "MunifTanjim/nui.nvim",
     }
   }
-  --use "akinsho/bufferline.nvim"
+  use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
@@ -85,6 +85,7 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'navarasu/onedark.nvim'
   use { "ellisonleao/gruvbox.nvim" }
+  use {'Tsuzat/NeoSolarized.nvim'}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
