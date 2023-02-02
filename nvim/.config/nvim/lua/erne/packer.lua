@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-path'},         -- Optional
             {'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            {'hrsh7th/cmp-cmdline'},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
@@ -37,4 +38,5 @@ return require('packer').startup(function(use)
         }
     }
     use 'simrat39/rust-tools.nvim'
+    use "lewis6991/gitsigns.nvim"
 end)
