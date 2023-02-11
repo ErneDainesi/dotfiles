@@ -11,7 +11,10 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- Colorschemes
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "olimorris/onedarkpro.nvim"
+
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'ThePrimeagen/harpoon'
     use {
