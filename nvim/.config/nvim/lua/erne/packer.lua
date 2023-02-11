@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     }
     use 'simrat39/rust-tools.nvim'
     use "lewis6991/gitsigns.nvim"
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} , tag = 'v3.4.0' }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
