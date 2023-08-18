@@ -1,2 +1,2 @@
-require("erne.remap")
 require("erne.set")
+require("erne.remap")
