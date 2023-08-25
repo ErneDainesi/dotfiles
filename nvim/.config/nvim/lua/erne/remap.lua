@@ -4,7 +4,7 @@ function CopyPath()
     if os.execute(cmd) then
         print(string.format("Copied path: %s", filename))
     else
-        print("Failed to copy pwd")
+        print("Couldn't copy file path")
     end
 end
 
