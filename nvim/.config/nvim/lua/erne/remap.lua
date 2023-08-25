@@ -1,4 +1,3 @@
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 function CopyPath()
     local filename = vim.fn.expand('%')
     local cmd = string.format("echo %s | xclip -selection clipboard", filename)
@@ -9,6 +8,7 @@ function CopyPath()
     end
 end
 
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>h", vim.cmd.nohlsearch)
 vim.keymap.set("n", "gl", function() vim.diagnostic.open_float(0, { scope = "line", border = "rounded" }) end)
 vim.keymap.set("n", "<Space>H", function() vim.lsp.buf.hover() end)
