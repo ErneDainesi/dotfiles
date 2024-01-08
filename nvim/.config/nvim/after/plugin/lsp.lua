@@ -10,6 +10,8 @@ lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
+    'phpactor',
+    'gopls'
 })
 
 local cmp = require('cmp')
@@ -22,11 +24,12 @@ lsp.defaults.cmp_mappings({
 
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
-
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
 end)
+
+vim.lsp.set_log_level("debug")
 
 lsp.setup()
 
@@ -40,4 +43,16 @@ cmp.setup {
         { name = "buffer" },
         { name = "path" },
     }
+}
+
+local lsp_config = require("lspconfig")
+
+lsp_config.phpactor.setup({
+    on_attach = lsp.on_attach
+})
+
+lsp_config.gopls.setup {
+    on_attach = lsp.on_attach,
+    cmd = {"gopls"},
+    filetypes = {"go", "gomod", "gowork", "gotmpl"}
 }
