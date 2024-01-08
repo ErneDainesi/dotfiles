@@ -48,4 +48,6 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use "lukas-reineke/indent-blankline.nvim"
+    use { 'rose-pine/neovim', as = 'rose-pine' }
+    use 'mbbill/undotree'
 end)

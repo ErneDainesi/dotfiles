@@ -27,3 +27,5 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "kj", "<Esc>")
+
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
