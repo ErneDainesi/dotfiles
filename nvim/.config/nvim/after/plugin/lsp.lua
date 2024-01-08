@@ -22,12 +22,14 @@ lsp.defaults.cmp_mappings({
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 })
 
-lsp.on_attach(function(client, bufnr)
+local function on_attach(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-end)
+end
+
+lsp.on_attach(on_attach)
 
 vim.lsp.set_log_level("debug")
 
@@ -48,16 +50,11 @@ cmp.setup {
 local lsp_config = require("lspconfig")
 
 lsp_config.phpactor.setup({
-    on_attach = function (client, bufnr)
-        local opts = {buffer = bufnr, remap = false}
-        vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-        vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-        vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-    end
+    on_attach = on_attach
 })
 
 lsp_config.gopls.setup {
-    on_attach = lsp.on_attach,
+    on_attach = on_attach,
     cmd = {"gopls"},
     filetypes = {"go", "gomod", "gowork", "gotmpl"}
 }
