@@ -69,4 +69,5 @@ require("onedarkpro").setup({
     }
 })
 
-ColorMyCode('rose-pine')
+--ColorMyCode('rose-pine')
+ColorMyCode()
