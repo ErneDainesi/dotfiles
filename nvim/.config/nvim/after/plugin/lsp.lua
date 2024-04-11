@@ -31,7 +31,7 @@ end
 
 lsp.on_attach(on_attach)
 
-vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("OFF")
 
 lsp.setup()
 
