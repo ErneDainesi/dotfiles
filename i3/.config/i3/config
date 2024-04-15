@@ -32,6 +32,8 @@ floating_modifier $mod
 exec --no-startup-id ~/.config/i3/autostart/setkeymap
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/tiefighter.jpg
 exec --no-startup-id compton -b
+# screenshot
+bindsym Print exec flameshot gui
 
 # start a terminal
 bindsym $mod+Return exec kitty
