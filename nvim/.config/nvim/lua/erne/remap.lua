@@ -1,6 +1,6 @@
 function CopyPath()
     local filename = vim.fn.expand('%')
-    local cmd = string.format("echo %s | xclip -selection clipboard", filename)
+    local cmd = string.format("echo -n %s | xclip -selection clipboard", filename)
     if os.execute(cmd) then
         print(string.format("Copied path: %s", filename))
     else
