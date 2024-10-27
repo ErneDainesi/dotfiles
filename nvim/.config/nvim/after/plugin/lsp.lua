@@ -53,6 +53,10 @@ lsp_config.phpactor.setup({
     on_attach = on_attach
 })
 
+lsp_config.tsserver.setup({
+    on_attach = on_attach
+})
+
 lsp_config.gopls.setup {
     on_attach = on_attach,
     cmd = {"gopls"},
