@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use { "catppuccin/nvim", as = "catppuccin" }
     use "olimorris/onedarkpro.nvim"
+    use "ellisonleao/gruvbox.nvim"
+    use { 'rose-pine/neovim', as = 'rose-pine' }
 
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'ThePrimeagen/harpoon'
@@ -48,6 +50,5 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use { 'rose-pine/neovim', as = 'rose-pine' }
     use 'mbbill/undotree'
 end)
