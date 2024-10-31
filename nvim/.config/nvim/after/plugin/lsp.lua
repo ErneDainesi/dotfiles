@@ -6,14 +6,6 @@ lsp.preset('recommended')
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
-lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'rust_analyzer',
-    'phpactor',
-    'gopls'
-})
-
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 lsp.defaults.cmp_mappings({
@@ -50,10 +42,6 @@ cmp.setup {
 local lsp_config = require("lspconfig")
 
 lsp_config.phpactor.setup({
-    on_attach = on_attach
-})
-
-lsp_config.tsserver.setup({
     on_attach = on_attach
 })
 
