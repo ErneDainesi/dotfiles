@@ -97,6 +97,6 @@ require("gruvbox").setup({
   transparent_mode = false,
 })
 
--- ColorMyCode('rose-pine', false)
-ColorMyCode('onedark', false)
+ColorMyCode('rose-pine', false)
+-- ColorMyCode('onedark', false)
 -- ColorMyCode('gruvbox', false)
