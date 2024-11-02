@@ -1,0 +1,8 @@
+[font]
+
+#normal.family = "JetBrainsMono"
+#bold.family = "JetBrainsMono"
+#italic.family = "JetBrainsMono"
+#bold_italic.family = "JetBrainsMono"
+
+size = 16.0
